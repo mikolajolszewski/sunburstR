@@ -166,7 +166,7 @@ HTMLWidgets.widget({
       function mouseover(d) {
 
         var percentage = (100 * d.value / totalSize).toPrecision(3);
-        var percentageString = percentage + "%";
+        var percentageString = Math.round(percentage * 10) / 10 + "%";
         if (percentage < 0.1) {
           percentageString = "< 0.1%";
         }
