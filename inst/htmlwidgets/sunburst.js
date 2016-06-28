@@ -251,7 +251,7 @@ HTMLWidgets.widget({
       function initializeBreadcrumbTrail() {
         // Add the svg area.
         var trail = d3.select(el).select(".sunburst-sequence").append("svg")
-            .attr("width", 900);
+            .attr("width", 900)
             //.attr("height", 50)
             .attr("id", el.id + "-trail");
         // Add the label at the end, for the percentage.
