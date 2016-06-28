@@ -352,7 +352,7 @@ HTMLWidgets.widget({
                 var my_g_length = bend.node().getBoundingClientRect().width;
 
                 var curr_breadcrumb_h = nodeArray[nodeArray.length-1].breadcrumb_h + b.h/2;
-                if (curr_breadcrumb_x + my_g_length > width*0.99) {
+                if (curr_breadcrumb_x + my_g_length > 900) {
                   curr_breadcrumb_h += b.h + b.h/2;
                   curr_breadcrumb_x = b.t + b.s;     // restart counter
                 }
