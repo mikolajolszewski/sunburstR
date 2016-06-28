@@ -303,7 +303,7 @@ HTMLWidgets.widget({
 
           entering.append("polygon")
               .style("z-index",function(d,i) { return(999-i); })
-              .style("fill", function(d) { return colors(d.name); });
+              .style("fill", function(d) { return colors(d); });
 
           entering.append("text")
               .attr("x", b.t + 2)
@@ -371,7 +371,7 @@ HTMLWidgets.widget({
         } else {
           entering.append("polygon")
               .attr("points", breadcrumbPoints)
-              .style("fill", function(d) { return colors(d.name); });
+              .style("fill", function(d) { return colors(d); });
 
           entering.append("text")
               .attr("x", (b.w + b.t) / 2)
