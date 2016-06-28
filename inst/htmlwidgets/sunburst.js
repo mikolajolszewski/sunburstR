@@ -330,10 +330,10 @@ HTMLWidgets.widget({
             curr_breadcrumb_x += k===0 ? 0 : nodeArray[k-1].string_length + b.s;
             nodeArray[k].breadcrumb_h = k===0 ? 0 : nodeArray[k-1].breadcrumb_h;
 
-            /*if (curr_breadcrumb_x + my_g_length > width*0.99) {
+            if (curr_breadcrumb_x + my_g_length > 900) {
               nodeArray[k].breadcrumb_h += b.h;  // got to next line
               curr_breadcrumb_x = b.t + b.s;     // restart counter
-            }*/
+            }
             nodeArray[k].breadcrumb_x = curr_breadcrumb_x;
           });
 
