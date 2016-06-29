@@ -179,7 +179,7 @@ HTMLWidgets.widget({
 
         var explanationString = "";
         if(x.options.percent && x.options.count){
-          explanationString = percentageString + '<br/>' + countString + '<br/><span class = "courses">courses</span>';
+          explanationString = percentageString + '<br/>' + countString + '<span class = "courses">courses</span>';
         } else if(x.options.percent){
           explanationString = percentageString;
         } else if(x.options.count){
@@ -194,7 +194,7 @@ HTMLWidgets.widget({
 
         d3.select(el).selectAll(".sunburst-explanation")
             .style("visibility", "")
-            .style("top",((height - 50)/2) + "px")
+            .style("top",((height - 70)/2) + "px")
             .style("width",width + "px")
             .html(explanationString);
 
