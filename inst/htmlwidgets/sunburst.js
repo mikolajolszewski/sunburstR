@@ -173,7 +173,7 @@ HTMLWidgets.widget({
 
         var countString = [
             '<span style = "font-size:.7em">',
-            d3.format("1.2s")(d.value) + ' of ' + d3.format("1.2s")(totalSize),
+            d.value.toLocaleString() + ' of ' + d3.format("1.2s")(totalSize),
             '</span>'
           ].join('')
 
