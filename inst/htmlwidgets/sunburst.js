@@ -141,7 +141,7 @@ HTMLWidgets.widget({
             return (d.dx > 0.005); // 0.005 radians = 0.29 degrees
             });
 
-        var idetifier = 0;
+        var identifier = 0;
 
         var path = vis.data([json]).selectAll("path")
             .data(nodes)
