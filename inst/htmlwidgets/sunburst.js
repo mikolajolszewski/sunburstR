@@ -141,14 +141,19 @@ HTMLWidgets.widget({
             return (d.dx > 0.005); // 0.005 radians = 0.29 degrees
             });
 
-        var identifier = 0;
-
         var path = vis.data([json]).selectAll("path")
             .data(nodes)
             .enter().append("path")
             .attr("display", function(d) { return d.depth ? null : "none"; })
             .attr("d", arc)
-            .attr("class", function() {identifier++; return 'segment-' + identifier})
+            .attr("class", function(d) {
+              var ancestors, finalString = '';
+              ancestors = getAncestors(d);
+              ancestors.forEach(function(x) {
+                finalString = finalString + x.name;
+              });
+              return finalString.replace(/ /g,"-").replace(/[^\w\s]/gi, '');
+            })
             .attr("fill-rule", "evenodd")
             .style("fill", function(d) {return colors(d.name); })
             .style("opacity", 1)
