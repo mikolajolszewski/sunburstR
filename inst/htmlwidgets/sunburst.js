@@ -152,7 +152,7 @@ HTMLWidgets.widget({
               ancestors.forEach(function(x) {
                 finalString = finalString + x.name;
               });
-              return finalString.replace(/ /g,"-").replace(/[^\w\s]/gi, '');
+              return 'segment' + finalString.replace(/ /g,"-").replace(/[^\w\s]/gi, '');
             })
             .attr("fill-rule", "evenodd")
             .style("fill", function(d) {return colors(d.name); })
