@@ -229,16 +229,16 @@ HTMLWidgets.widget({
             .style("visibility", "hidden");
 
         // Deactivate all segments during transition.
-        d3.select(el).selectAll("path").on("mouseover", null);
+        // d3.select(el).selectAll("path").on("mouseover", null);
 
         // Transition each segment to full opacity and then reactivate it.
         d3.select(el).selectAll("path")
-            .transition()
-            .duration(1000)
+            //.transition()
+            //.duration(1000)
             .style("opacity", 1)
-            .each("end", function() {
+            /* .each("end", function() {
                     d3.select(this).on("mouseover", mouseover);
-                  });
+                  });*/
 
         d3.select(el).selectAll(".sunburst-explanation")
             .style("visibility", "hidden");
